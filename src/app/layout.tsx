@@ -5,6 +5,7 @@ import React from 'react';
 import { MobileNavMenu } from '@/components/mobile-nav-menu';
 import { arcadeFont, interFont } from '@/components/fonts';
 import { cn } from '@/util/cn';
+import { Header } from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Matt Bise',
@@ -38,19 +39,7 @@ export default function RootLayout({
           interFont.className,
         )}
       >
-        <nav className="fixed left-2 right-2 top-2 z-20 flex h-[50px] items-center justify-between rounded-full border bg-zinc-950/50 px-4 backdrop-blur-sm">
-          <div />
-          <div
-            className={cn(
-              'absolute left-1/2 top-[9px] whitespace-nowrap text-2xl',
-              arcadeFont.className,
-            )}
-            style={{ transform: 'translate(-50%)' }}
-          >
-            Matt Bise
-          </div>
-          <MobileNavMenu />
-        </nav>
+        <Header />
         <main className="h-full w-full overflow-auto">{children}</main>
       </body>
     </html>

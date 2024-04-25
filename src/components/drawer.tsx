@@ -50,11 +50,11 @@ const Content = React.forwardRef<
 
     return (
       <DialogPrimitives.Portal>
-        <DialogPrimitives.Overlay className="data-[state=open]:animate-fadein data-[state=closed]:animate-fadeout fixed bottom-0 left-0 right-0 top-0 z-30 bg-zinc-950/25 backdrop-blur-sm" />
+        <DialogPrimitives.Overlay className="fixed bottom-0 left-0 right-0 top-0 z-30 bg-zinc-950/25 backdrop-blur-sm data-[state=closed]:animate-fadeout data-[state=open]:animate-fadein" />
         <DialogPrimitives.Content
           ref={ref}
           className={cn(
-            'data-[state=closed]:animate-slideout-right data-[state=open]:animate-slidein-right fixed bottom-0 right-0 top-0 z-40 max-h-screen w-[320px] bg-zinc-900 shadow-lg',
+            'fixed bottom-0 right-0 top-0 z-40 max-h-screen w-[320px] bg-zinc-900 shadow-lg data-[state=closed]:animate-slideout-right data-[state=open]:animate-slidein-right',
             'drawer-content',
             className,
           )}
@@ -63,9 +63,9 @@ const Content = React.forwardRef<
         >
           {children}
           <DialogPrimitives.Close
-            className={cn('absolute right-4 top-4', closeButtonClassName)}
+            className={cn('absolute right-6 top-4', closeButtonClassName)}
           >
-            <Cross1Icon height={18} width={18} />
+            <Cross1Icon height={24} width={24} />
           </DialogPrimitives.Close>
         </DialogPrimitives.Content>
       </DialogPrimitives.Portal>
