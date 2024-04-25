@@ -3,5 +3,6 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     '@next/next/no-img-element': 'off',
+    'react/display-name': 'off',
   },
 };

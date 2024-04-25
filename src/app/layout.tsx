@@ -1,9 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import React from 'react';
-
 import './globals.css';
-import { Nav } from '@/app/nav';
+
+import { Metadata } from 'next';
+import React from 'react';
+import { MobileNavMenu } from '@/components/mobile-nav-menu';
+import { arcadeFont, interFont } from '@/components/fonts';
+import { cn } from '@/util/cn';
 
 export const metadata: Metadata = {
   title: 'Matt Bise',
@@ -31,8 +32,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Nav />
+      <body
+        className={cn(
+          'flex h-screen w-screen flex-col bg-zinc-950 text-white',
+          interFont.className,
+        )}
+      >
+        <nav className="fixed left-2 right-2 top-2 z-20 flex h-[50px] items-center justify-between rounded-full border bg-zinc-950/50 px-4 backdrop-blur-sm">
+          <div />
+          <div
+            className={cn(
+              'absolute left-1/2 top-[9px] whitespace-nowrap text-2xl',
+              arcadeFont.className,
+            )}
+            style={{ transform: 'translate(-50%)' }}
+          >
+            Matt Bise
+          </div>
+          <MobileNavMenu />
+        </nav>
         <main className="h-full w-full overflow-auto">{children}</main>
       </body>
     </html>
