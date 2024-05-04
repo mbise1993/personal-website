@@ -8,4 +8,5 @@ export const arcadeFont = localFont({
 
 export const interFont = Inter({
   variable: '--mb-font-inter',
+  subsets: ['latin'],
 });
