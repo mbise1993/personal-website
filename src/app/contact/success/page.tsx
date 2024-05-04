@@ -5,7 +5,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Success | Matt Bise',
-  robots: 'noindex nofollow',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function Page() {

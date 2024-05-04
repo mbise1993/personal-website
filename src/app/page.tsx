@@ -6,6 +6,7 @@ import { cn } from '@/util/cn';
 import { Badge } from '@/components/badge';
 import { Button } from '@/components/button';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 interface SectionProps {
   image: React.ReactNode;
@@ -42,6 +43,12 @@ const Section = ({
       </div>
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "Matt Bise's Homepage",
+  description:
+    "My services, portfolio, music, and contact info. Let's work together!",
 };
 
 export default function Page() {
