@@ -4,6 +4,8 @@ import React from 'react';
 import styles from './styles.module.css';
 import { cn } from '@/util/cn';
 import { Badge } from '@/components/badge';
+import { Button } from '@/components/button';
+import Link from 'next/link';
 
 interface SectionProps {
   image: React.ReactNode;
@@ -51,13 +53,19 @@ export default function Page() {
           {/* hero text */}
           <div className="flex w-fit flex-1 flex-col justify-center">
             <h1 className="text-4xl font-black md:text-5xl">
-              Software Developer & Musician
+              Freelance Web Developer
             </h1>
             <div className="mt-8">
               I offer everything from freelancing and consulting to fully
               custom, from-scratch website and web app development. Let&apos;s
               bring your vision to life!
             </div>
+            <Link
+              className="mt-8 inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md bg-white px-8 font-medium text-blue-600 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+              href="/contact"
+            >
+              Get in touch
+            </Link>
           </div>
           {/* hero image */}
           <div className="flex flex-1 justify-center">

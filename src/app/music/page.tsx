@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="page-container">
-      <h1 className="mb-6 text-4xl font-bold">Music</h1>
+      <h1 className="mb-6 text-3xl font-bold">Music</h1>
       <div className="flex flex-col gap-8 pb-12 pt-8 bleed-bg bleed-[#a33c41] md:flex-row md:pt-12">
         <div className="flex flex-col">
           <Image
