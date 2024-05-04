@@ -51,5 +51,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-full-bleed')],
 };

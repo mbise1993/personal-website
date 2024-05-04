@@ -11,6 +11,10 @@
     --mb-ease-out: cubic-bezier(0, 0, 0.2, 1);
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   a {
     text-decoration: underline;
     -webkit-tap-highlight-color: transparent;
@@ -25,6 +29,10 @@
   .drawer-content {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .page-container {
+    @apply mx-auto max-w-screen-lg px-4 py-20;
   }
 }
 

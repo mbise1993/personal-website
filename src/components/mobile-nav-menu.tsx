@@ -13,6 +13,10 @@ const LINK_CLASSES = cn('text-sm no-underline', arcadeFont.className);
 export const MobileNavMenu = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
+  function handleLinkClick() {
+    setIsOpen(false);
+  }
+
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen}>
       <Drawer.Trigger>
@@ -25,11 +29,26 @@ export const MobileNavMenu = () => {
             <div className="">LINKS</div>
             <hr className="w-2/3" />
           </div>
-          <Link className={LINK_CLASSES} href="/portfolio">
+          <Link
+            className={LINK_CLASSES}
+            href="/portfolio"
+            onClick={handleLinkClick}
+          >
             Portfolio
           </Link>
-          <Link className={LINK_CLASSES} href="/music">
+          <Link
+            className={LINK_CLASSES}
+            href="/music"
+            onClick={handleLinkClick}
+          >
             Music
+          </Link>
+          <Link
+            className={LINK_CLASSES}
+            href="/contact"
+            onClick={handleLinkClick}
+          >
+            Contact
           </Link>
         </div>
         <div className="flex flex-col gap-3 pt-12">

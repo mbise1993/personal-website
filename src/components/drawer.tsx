@@ -54,7 +54,7 @@ const Content = React.forwardRef<
         <DialogPrimitives.Content
           ref={ref}
           className={cn(
-            'fixed bottom-0 right-0 top-0 z-40 max-h-screen w-[320px] bg-zinc-900 shadow-lg data-[state=closed]:animate-slideout-right data-[state=open]:animate-slidein-right',
+            'fixed bottom-0 right-0 top-0 z-40 max-h-screen w-[300px] bg-zinc-900 shadow-lg data-[state=closed]:animate-slideout-right data-[state=open]:animate-slidein-right',
             'drawer-content',
             className,
           )}

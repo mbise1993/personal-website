@@ -17,7 +17,7 @@ export const SocialLinks = ({
 }: SocialLinksProps) => {
   return (
     <div className={className}>
-      <a className={LINK_CLASSES} href="https://x.com/matthew.bise">
+      <a className={LINK_CLASSES} href="https://x.com/matthewbise">
         <TwitterLogoIcon height={iconSize} width={iconSize} />
       </a>
       <a className={LINK_CLASSES} href="https://instagram.com/matthew.bise">

@@ -6,6 +6,7 @@ import { MobileNavMenu } from '@/components/mobile-nav-menu';
 import { arcadeFont, interFont } from '@/components/fonts';
 import { cn } from '@/util/cn';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Matt Bise',
@@ -40,7 +41,10 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <main className="h-full w-full overflow-auto">{children}</main>
+        <main className="h-full w-full overflow-auto">
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

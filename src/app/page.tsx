@@ -24,7 +24,7 @@ const Section = ({
     direction === 'row' ? 'md:flex-row' : 'md:flex-row-reverse';
 
   return (
-    <div className="flex justify-center px-4 py-20">
+    <div className="flex justify-center px-4 py-16 md:py-20">
       <div
         className={cn(
           'flex max-w-screen-lg flex-col gap-6 md:items-center',
@@ -55,14 +55,15 @@ export default function Page() {
             </h1>
             <div className="mt-8">
               I offer everything from freelancing and consulting to fully
-              custom, from-scratch website and app development. Let&apos;s bring
-              your vision to life!
+              custom, from-scratch website and web app development. Let&apos;s
+              bring your vision to life!
             </div>
           </div>
           {/* hero image */}
           <div className="flex flex-1 justify-center">
             <div className={cn('mt-6', styles['image-container'])}>
               <Image
+                priority
                 className="w-[400px] rounded-lg"
                 src="/images/headshot.jpg"
                 alt="Photo of Matt Bise"
@@ -83,7 +84,7 @@ export default function Page() {
             src="/images/web-development.svg"
           />
         }
-        header="Web Development"
+        header="Website Development"
         badges={
           <>
             <Badge
@@ -104,6 +105,45 @@ export default function Page() {
             >
               Next.js
             </Badge>
+            <Badge className="bg-red-500/20 text-red-400" href="/portfolio">
+              Remix
+            </Badge>
+          </>
+        }
+      >
+        Ditch the slow, non-responsive site builders and get a 100% custom-made
+        static website for your brand. I leverage modern technologies, web
+        standards, and the latest best practices to ensure that your site is
+        mobile-optimized, fast, and SEO-friendly so that you get more potential
+        customers to your site and ensure they have a great experience while
+        there.
+      </Section>
+
+      {/* section 3 */}
+      <Section
+        direction="row-reverse"
+        image={
+          <img
+            className="h-[260px]"
+            alt="app development"
+            src="/images/app-development.svg"
+          />
+        }
+        header="Web App Development"
+        badges={
+          <>
+            <Badge
+              className="bg-red-500/20 text-red-400"
+              href="https://laravel.com/"
+            >
+              Laravel
+            </Badge>
+            <Badge
+              className="bg-blue-500/20 text-blue-400"
+              href="https://react.dev/"
+            >
+              React
+            </Badge>
             <Badge
               className="bg-green-500/20 text-green-400"
               href="https://nodejs.org/en"
@@ -122,60 +162,14 @@ export default function Page() {
             >
               PostgreSQL
             </Badge>
-            <Badge className="bg-red-500/20 text-red-400" href="/portfolio">
-              + many more!
-            </Badge>
           </>
         }
       >
-        We leverage modern web development architecture, open source software,
-        and the latest best practices to ensure that our websites and web
-        applications have great performance, low operating costs and impressive
-        scalability. We handle everything from content management systems for
-        managing an online presence to social publishing and dynamic
-        community-driven platforms.
-      </Section>
-
-      {/* section 3 */}
-      <Section
-        direction="row-reverse"
-        image={
-          <img
-            className="h-[260px]"
-            alt="app development"
-            src="/images/app-development.svg"
-          />
-        }
-        header="App Development"
-        badges={
-          <>
-            <Badge
-              className="bg-blue-500/20 text-blue-400"
-              href="https://reactnative.dev/"
-            >
-              React Native
-            </Badge>
-            <Badge
-              className="bg-slate-400/20 text-slate-300"
-              href="https://developer.apple.com/"
-            >
-              iOS
-            </Badge>
-            <Badge
-              className="bg-green-500/20 text-green-400"
-              href="https://developer.android.com/"
-            >
-              Android
-            </Badge>
-          </>
-        }
-      >
-        We leverage modern web development architecture, open source software,
-        and the latest best practices to ensure that our websites and web
-        applications have great performance, low operating costs and impressive
-        scalability. We handle everything from content management systems for
-        managing an online presence to social publishing and dynamic
-        community-driven platforms.
+        Need something a bit more full-featured than a static site? With
+        experience working on a wide variety of products from social platforms
+        to SAAS applications to large-scale e-commerce, I&apos;m confident that
+        we can work together to create a custom solution that brings your vision
+        to life.
       </Section>
 
       {/* section 4 */}
@@ -199,12 +193,11 @@ export default function Page() {
           </>
         }
       >
-        We leverage modern web development architecture, open source software,
-        and the latest best practices to ensure that our websites and web
-        applications have great performance, low operating costs and impressive
-        scalability. We handle everything from content management systems for
-        managing an online presence to social publishing and dynamic
-        community-driven platforms.
+        Let me bring over 8 years of experience in a wide variety of modern,
+        in-demand technologies to your team or project. From greenfield
+        development to legacy application maintenance/upgrades, I have the
+        experience to ensure a smooth, collaborative process that meets your
+        needs.
       </Section>
     </div>
   );
